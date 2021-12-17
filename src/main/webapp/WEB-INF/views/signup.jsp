@@ -8,15 +8,13 @@
     <title>SignUP</title>
 </head>
 <body>
-<form:form action = "process-signup" method = "POST" modelAttribute="signupdto">
+<form:form action="process-signup" method="POST" modelAttribute="signupdto">
 
-    Username : <form:input path = "username"/>
+    Username : <input type="text" name="username">
     <br/>
-    Password : <form:password path = "password"/>
+    Password : <input type = "text" name = "password">
     <br/>
-    <input type="submit" value="signup"/>
-
+    <input type = "submit" value = "<<<SignUP>>">
 </form:form>
-
 </body>
 </html>

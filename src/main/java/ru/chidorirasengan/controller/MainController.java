@@ -1,6 +1,7 @@
 package ru.chidorirasengan.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,13 +11,16 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import ru.chidorirasengan.config.GoogleMail;
 import ru.chidorirasengan.dao.ShoppingCartDao;
 import ru.chidorirasengan.dao.OrderDao;
 import ru.chidorirasengan.dao.ProductDao;
 import ru.chidorirasengan.dao.UserDetailsDao;
+import ru.chidorirasengan.entity.Order;
 import ru.chidorirasengan.entity.Product;
 import ru.chidorirasengan.entity.ShoppingCart;
 
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 import java.util.Collection;
@@ -26,6 +30,8 @@ import java.util.List;
 @Transactional
 @EnableWebMvc
 public class MainController {
+    @Autowired
+    private GoogleMail googleMailSender;
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
@@ -83,6 +89,8 @@ public class MainController {
     public String main(){
         return "mainpage";
     }
+    @RequestMapping("/signup")
+    public String signup(){return "signup";}
     /*@RequestMapping("/buyproduct")
     public String buyProduct(HttpServletRequest request, Model model,
                              @RequestParam(value = "code", defaultValue = "") String code){
@@ -145,9 +153,16 @@ public class MainController {
         model.addAttribute("category",category);
         return "categorypage";
     }
+
     @GetMapping("/finish-cart")
-    public String finish(Principal principal){
+    public String finish(Principal principal) throws MessagingException {
+        ShoppingCart shoppingCart = shoppingCartDao.findShoppingCart(principal.getName());
+        String message = principal.getName() + ", Вы оформили заказ на сумму: " + shoppingCart.getSum() + "руб. \n" + "Позиции в заказе: \n";
+        for (Order order:shoppingCart.getOrders()) {
+            message += order.getProduct().getName() + " " +order.getQuantity() + "шт " + order.getAmount()+"руб."+ "\n";
+        }
         shoppingCartDao.purchaseCart(principal.getName());
+        googleMailSender.send("bibaboss1488","Bosspassword", principal.getName(), "title", message);
         return "finish";
     }
     @GetMapping("/admin")
