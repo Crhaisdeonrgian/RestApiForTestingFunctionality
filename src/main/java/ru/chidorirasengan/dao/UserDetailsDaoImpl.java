@@ -11,7 +11,10 @@ import ru.chidorirasengan.entity.User;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * NetworkTechnologiesProject
+ * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 @Transactional
 @Repository
 public class UserDetailsDaoImpl implements UserDetailsDao{

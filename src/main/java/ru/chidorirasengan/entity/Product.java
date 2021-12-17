@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
-
+/**
+ * NetworkTechnologiesProject
+ * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 @Entity
 @Table(name = "Products")
 public class Product implements Serializable {

@@ -3,7 +3,10 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.*;
-
+/**
+ * NetworkTechnologiesProject
+ * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 @Entity
 @Table(name = "Cart")
 public class ShoppingCart implements Serializable{

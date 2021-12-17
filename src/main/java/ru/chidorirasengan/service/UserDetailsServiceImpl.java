@@ -10,7 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ru.chidorirasengan.dao.UserDetailsDao;
 import ru.chidorirasengan.entity.User;
-
+/**
+ * NetworkTechnologiesProject
+ * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 @Service("userDetailsService")
 public class UserDetailsServiceImpl implements UserDetailsService {
 

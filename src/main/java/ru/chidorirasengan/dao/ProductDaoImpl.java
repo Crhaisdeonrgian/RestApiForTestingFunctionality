@@ -10,6 +10,10 @@ import ru.chidorirasengan.entity.Product;
 import ru.chidorirasengan.entity.User;
 
 import java.util.List;
+/**
+ * NetworkTechnologiesProject
+ * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 @Transactional
 @Repository
 public class ProductDaoImpl implements ProductDao{

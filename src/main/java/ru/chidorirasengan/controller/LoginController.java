@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ru.chidorirasengan.dao.UserDetailsDao;
 import ru.chidorirasengan.dao.UserDetailsDaoImpl;
 import ru.chidorirasengan.entity.User;
-
 /**
- * See some comments later...
+ * NetworkTechnologiesProject
  * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
  */
 @Controller

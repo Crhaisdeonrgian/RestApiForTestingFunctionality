@@ -4,6 +4,8 @@
          isELIgnored="false" %><html>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%-- NetworkTechnologiesProject
+ @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]--%>
 <head>
 
     <title>ProductConfirmation</title>

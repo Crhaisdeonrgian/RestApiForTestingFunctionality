@@ -1,5 +1,8 @@
 package ru.chidorirasengan.config;
-
+/*
+  NetworkTechnologiesProject
+  @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class MvcWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {

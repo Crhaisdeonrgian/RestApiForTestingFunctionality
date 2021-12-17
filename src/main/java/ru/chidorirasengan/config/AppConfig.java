@@ -12,10 +12,11 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import ru.chidorirasengan.entity.*;
-
-
 import static org.hibernate.cfg.Environment.*;
-
+/**
+ * NetworkTechnologiesProject
+ * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement

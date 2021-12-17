@@ -1,5 +1,7 @@
 /*
 package ru.chidorirasengan.entity;
+  NetworkTechnologiesProject
+  @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
 
 import javax.persistence.*;
 import java.util.HashSet;

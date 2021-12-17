@@ -9,6 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.chidorirasengan.entity.Order;
 import ru.chidorirasengan.entity.Product;
 import ru.chidorirasengan.entity.User;
+/**
+ * NetworkTechnologiesProject
+ * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 @Transactional
 @Repository
 public class OrderDaoImpl implements OrderDao{

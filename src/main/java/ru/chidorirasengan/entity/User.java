@@ -4,7 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
-
+/**
+ * NetworkTechnologiesProject
+ * @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 @Entity
 @Table(name = "USERS")
 public class User {
