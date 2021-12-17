@@ -1,7 +1,10 @@
 package ru.chidorirasengan.config;
 
 import org.springframework.context.annotation.Configuration;
-
+/*
+  NetworkTechnologiesProject
+  @author crhaisdeonrgian [https://github.com/Crhaisdeonrgian]
+ */
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
